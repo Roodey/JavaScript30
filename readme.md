@@ -2,6 +2,8 @@
 
 # JavaScript30
 
+Status: Finished with lesson 12, on to 13.
+
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
 
 Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
