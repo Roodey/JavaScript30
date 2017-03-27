@@ -44,7 +44,21 @@
 
 <script>
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+const list = document.querySelector('#bands');
 
+let sortedBands = bands.sort((a,b) => {
+  let A = a.split(' ').forEach((num,item) => {
+    if(item !== 'A' && item !== 'An' && item !== 'The' ){
+      return item;
+    }
+  });
+  console.log(a);
+  let B;
+  console.log(`${a}, ${b}`);
+  if(a.split(' ')[0] === 'A' || a.split(' ')[0] === 'An' || a.split(' ')[0] === 'The'){
+
+  }
+})
 
 </script>
 
