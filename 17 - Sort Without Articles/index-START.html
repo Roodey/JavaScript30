@@ -47,19 +47,19 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 const list = document.querySelector('#bands');
 
 let sortedBands = bands.sort((a,b) => {
-  let A = a.split(' ').forEach((num,item) => {
-    if(item !== 'A' && item !== 'An' && item !== 'The' ){
-      return item;
-    }
-  });
-  console.log(a);
-  let B;
-  console.log(`${a}, ${b}`);
-  if(a.split(' ')[0] === 'A' || a.split(' ')[0] === 'An' || a.split(' ')[0] === 'The'){
-
+  if(strip(a) > strip(b)){
+    return 1;
   }
-})
+  else{
+    return -1;
+  }
 
+});
+list.innerHTML = sortedBands;
+
+function strip(bandName){
+    return bandName.replace(/^(the |an |a )/i,'').trim();
+}
 </script>
 
 </body>
